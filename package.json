@@ -2,6 +2,7 @@
   "name": "template",
   "version": "0.1.0",
   "main": "index.js",
+  "author": "wjsxqs <xsmlcp@163.com>",
   "license": "MIT",
   "scripts": {
     "test": "TS_NODE_TRANSPILE_ONLY=1 hardhat test",
@@ -16,6 +17,15 @@
     "lint": "eslint \"**/*.{js,ts}\"",
     "lint:fix": "eslint --fix \"**/*.{js,ts}\""
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wjsxqs/solidity-contract-template.git"
+  },
+  "keywords": [
+    "Solidity",
+    "Template",
+    "Contract"
+  ],
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "2.0.2",
     "@nomiclabs/hardhat-etherscan": "2.0.1",
