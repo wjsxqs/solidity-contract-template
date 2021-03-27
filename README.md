@@ -18,4 +18,4 @@ The following assumes the use of `node@>=10`.
 
 ## Deploy Contracts
 
-`deploy:local`
+`yarn deploy:local`
