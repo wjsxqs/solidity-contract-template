@@ -5,17 +5,19 @@
   "author": "wjsxqs <xsmlcp@163.com>",
   "license": "MIT",
   "scripts": {
-    "test": "TS_NODE_TRANSPILE_ONLY=1 hardhat test",
+    "test": "hardhat test",
     "test:mocha": "mocha",
     "build": "rm -rf typings && hardhat clean && yarn compile",
-    "compile": "hardhat --max-memory 4096 compile && yarn gen:typings",
-    "deploy:local": "hardhat run --network localhost scripts/deploy.ts",
-    "deploy:ganache": "hardhat run --network ganache scripts/deploy.ts",
-    "deploy:rinkeby": "hardhat run --network rinkeby scripts/deploy.ts",
+    "compile": "hardhat compile",
+    "run:local": "hardhat run --network localhost",
+    "run:rinkeby": "hardhat run --network rinkeby",
+    "run:mainnet": "hardhat run --network mainnet",
     "size-contracts": "hardhat size-contracts",
     "gen:typings": "rm -rf typings/contracts/* && typechain --target ethers-v5 --outDir typings/contracts './artifacts/contracts/*/*[^dbg].json'",
     "lint": "eslint \"**/*.{js,ts}\"",
-    "lint:fix": "eslint --fix \"**/*.{js,ts}\""
+    "lint:fix": "eslint --fix \"**/*.{js,ts}\"",
+    "ci:test": "yarn compile && yarn test",
+    "ci:clean": "rm -rf ./artifacts ./cache ./types"
   },
   "repository": {
     "type": "git",
@@ -37,18 +39,23 @@
     "@typescript-eslint/eslint-plugin": "^4.7.0",
     "@typescript-eslint/parser": "^4.7.0",
     "chai": "^4.3.4",
+    "dotenv": "^10.0.0",
     "eslint": "^7.13.0",
     "eslint-plugin-import": "^2.22.1",
-    "dotenv": "^8.2.0",
     "ethereum-waffle": "^3.3.0",
     "ethers": "^5.0.32",
     "hardhat": "2.1.1",
     "hardhat-contract-sizer": "^2.0.2",
     "hardhat-gas-reporter": "^1.0.4",
+    "hardhat-typechain": "^0.3.5",
     "mocha": "^8.2.1",
     "solhint": "^3.3.2",
+    "ts-generator": "^0.1.1",
     "ts-node": "^9.0.0",
     "typechain": "^4.0.0",
     "typescript": "^4.0.5"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.1.0"
   }
 }
