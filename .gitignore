@@ -7,3 +7,6 @@ typings/*
 
 config/*
 !config/template.env
+
+types
+.env
