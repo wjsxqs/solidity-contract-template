@@ -102,16 +102,16 @@
       }
     ],
     "camelcase": "off",
-    "comma-dangle": [
-      "error",
-      {
-        "arrays": "never",
-        "exports": "never",
-        "functions": "never",
-        "imports": "never",
-        "objects": "never"
-      }
-    ],
+    // "comma-dangle": [
+    //   "error",
+    //   {
+    //     "arrays": "never",
+    //     "exports": "never",
+    //     "functions": "never",
+    //     "imports": "never",
+    //     "objects": "never"
+    //   }
+    // ],
     "comma-spacing": [
       "error",
       {
@@ -358,10 +358,10 @@
     "no-useless-return": "error",
     "no-whitespace-before-property": "error",
     "no-with": "error",
-    "object-curly-spacing": [
-      "error",
-      "never"
-    ],
+    // "object-curly-spacing": [
+    //   "error",
+    //   "never"
+    // ],
     "object-property-newline": [
       "error",
       {
