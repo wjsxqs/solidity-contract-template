@@ -4,7 +4,7 @@
       "func-order": "off",
       "mark-callable-contracts": "off",
       "no-empty-blocks": "off",
-      "compiler-version": ["error", "^0.5.12"],
+      "compiler-version": ["error", "^0.8.0"],
       "reason-string": "off",
       "quotes": "warn",
       "var-name-mixedcase": "off"
