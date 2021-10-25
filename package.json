@@ -5,17 +5,18 @@
   "author": "wjsxqs <xsmlcp@163.com>",
   "license": "MIT",
   "scripts": {
-    "test": "TS_NODE_TRANSPILE_ONLY=1 hardhat test",
+    "test": "hardhat test",
     "test:mocha": "mocha",
-    "build": "rm -rf typings && hardhat clean && yarn compile",
-    "compile": "hardhat --max-memory 4096 compile && yarn gen:typings",
+    "build": "yarn ci:clean && yarn compile",
+    "compile": "hardhat --max-memory 4096 compile",
     "deploy:local": "hardhat run --network localhost scripts/deploy.ts",
     "deploy:ganache": "hardhat run --network ganache scripts/deploy.ts",
     "deploy:rinkeby": "hardhat run --network rinkeby scripts/deploy.ts",
     "size-contracts": "hardhat size-contracts",
-    "gen:typings": "rm -rf typings/contracts/* && typechain --target ethers-v5 --outDir typings/contracts './artifacts/contracts/*/*[^dbg].json'",
     "lint": "eslint \"**/*.{js,ts}\"",
-    "lint:fix": "eslint --fix \"**/*.{js,ts}\""
+    "lint:fix": "eslint --fix \"**/*.{js,ts}\"",
+    "ci:test": "yarn compile && yarn test",
+    "ci:clean": "rm -rf ./artifacts ./cache ./types"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
     "@nomiclabs/hardhat-etherscan": "2.1.7",
     "@nomiclabs/hardhat-waffle": "2.0.1",
     "@typechain/ethers-v5": "^7.2.0",
+    "@typechain/hardhat": "^2.3.1",
     "@types/chai": "^4.2.22",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.11.4",

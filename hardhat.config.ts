@@ -1,10 +1,10 @@
 import { HardhatUserConfig } from 'hardhat/config';
-import "@nomiclabs/hardhat-etherscan";
-import "@nomiclabs/hardhat-ethers";
-import "@nomiclabs/hardhat-waffle";
-
-import "hardhat-gas-reporter";
-import "hardhat-contract-sizer";
+import '@nomiclabs/hardhat-etherscan';
+import '@nomiclabs/hardhat-ethers';
+import '@nomiclabs/hardhat-waffle';
+import '@typechain/hardhat';
+import 'hardhat-gas-reporter';
+import 'hardhat-contract-sizer';
 
 const config: HardhatUserConfig = {
   defaultNetwork: 'hardhat',
@@ -33,7 +33,14 @@ const config: HardhatUserConfig = {
     alphaSort: true,
     runOnCompile: true,
     disambiguatePaths: false,
+  },
+  typechain: {
+    outDir: 'types',
+    target: 'ethers-v5'
+  },
+  mocha: {
+    timeout: 0,
   }
-}
+};
 
 export default config;
