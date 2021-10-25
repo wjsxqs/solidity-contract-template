@@ -1,7 +1,6 @@
 {
-  "name": "template",
+  "name": "solidity-contract-template",
   "version": "0.1.0",
-  "main": "index.js",
   "author": "wjsxqs <xsmlcp@163.com>",
   "license": "MIT",
   "scripts": {
