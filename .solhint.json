@@ -1,25 +1,25 @@
 {
-    "extends": "solhint:recommended",
-    "rules": {
-      "no-unused-vars": "error",
-      "compiler-version": ["error", "^0.8.0"],
-      "const-name-snakecase": "error",
-      "contract-name-camelcase": "error",
-      "event-name-camelcase": "error",
-      "func-name-mixedcase": "warn",
-      "func-param-name-mixedcase": "error",
-      "modifier-name-mixedcase": "error",
-      "private-vars-leading-underscore": "error",
-      "var-name-mixedcase": "error",
-      "imports-on-top": "error",
-      "func-visibility": ["warn", {"ignoreConstructors": true}],
-      "not-rely-on-time": "off",
-      "prettier/prettier": [
-        "error",
-        {
-          "endOfLine": "auto"
-        }
-      ],
-      "reason-string": ["warn", { "maxLength": 64 }]
-    }
+  "extends": "solhint:recommended",
+  "rules": {
+    "no-unused-vars": "error",
+    "compiler-version": ["error", "^0.8.0"],
+    "const-name-snakecase": "error",
+    "contract-name-camelcase": "error",
+    "event-name-camelcase": "error",
+    "func-name-mixedcase": "warn",
+    "func-param-name-mixedcase": "error",
+    "modifier-name-mixedcase": "error",
+    "private-vars-leading-underscore": "error",
+    "var-name-mixedcase": "error",
+    "imports-on-top": "error",
+    "func-visibility": ["warn", { "ignoreConstructors": true }],
+    "not-rely-on-time": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "reason-string": ["warn", { "maxLength": 64 }]
+  }
 }
