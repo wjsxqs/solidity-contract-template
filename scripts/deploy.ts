@@ -1,4 +1,4 @@
-import {ethers} from 'hardhat';
+import { ethers } from 'hardhat';
 
 async function main() {
   // We get the contract to deploy
@@ -12,7 +12,7 @@ async function main() {
 
 main()
   .then(() => process.exit(0))
-  .catch(error => {
+  .catch((error) => {
     console.error(error);
     process.exit(1);
   });

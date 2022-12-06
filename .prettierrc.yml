@@ -1,14 +1,15 @@
 bracketSpacing: true
-endOfLine: "auto"
+endOfLine: 'auto'
 printWidth: 100
-proseWrap: "always"
+proseWrap: 'always'
 singleQuote: true
 tabWidth: 2
-trailingComma: "all"
+trailingComma: 'all'
 
 overrides:
-  - files: "*.sol"
+  - files: '*.sol'
     options:
-      compiler: "0.8.13"
+      compiler: '0.8.13'
+      singleQuote: false
       tabWidth: 4
       printWidth: 120
