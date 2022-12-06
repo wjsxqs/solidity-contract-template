@@ -1,8 +1,4 @@
-# contract-template
-
-## Local Development
-
-The following assumes the use of `node@>=10`.
+# solidity-contract-template
 
 ## Install Dependencies
 
