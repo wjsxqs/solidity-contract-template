@@ -77,7 +77,7 @@ const config: HardhatUserConfig = {
     },
     arbitrum_goerli: {
       chainId: 421613,
-      url: `https://arb-testnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}`,
+      url: `https://arb-goerli.g.alchemy.com/v2/${ALCHEMY_API_KEY}`,
       accounts: ACCOUNTS,
     },
     optimism: {
@@ -87,7 +87,7 @@ const config: HardhatUserConfig = {
     },
     optimism_goerli: {
       chainId: 420,
-      url: `https://opt-testnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}`,
+      url: `https://opt-goerli.g.alchemy.com/v2/${ALCHEMY_API_KEY}`,
       accounts: ACCOUNTS,
     },
     fantom: {
