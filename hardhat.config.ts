@@ -190,14 +190,7 @@ const config: HardhatUserConfig = {
     runOnCompile: true,
     clear: true,
     flat: true,
-    only: [
-      ':PassNFT$',
-      ':MascotNFT$',
-      ':GameVault$',
-      ':PaymentVault$',
-      ':DeployFactory$',
-      ':ERC20UpgradeableMock$',
-    ],
+    only: [':Greeter$'],
     pretty: true,
   },
   typechain: {
